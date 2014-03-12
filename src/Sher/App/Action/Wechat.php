@@ -38,9 +38,10 @@ class Sher_App_Action_Wechat extends Sher_App_Action_Authorize {
 		
         //valid signature , option
         if($this->checkSignature()){
-        	echo $echoStr;
-        	exit;
+			return $this->to_raw($echoStr);
         }
+		
+		return $this->to_raw('Erorr: not match!');
     }
 
     public function responseMsg() {
