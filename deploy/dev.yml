@@ -6,7 +6,7 @@
   # cache: 'MemFile'
   # cache_dir: '/tmp/lgk'
 
-app.domain.base: 'http://sher.me'
+app.domain.base: 'http://dayojia.me'
 #if in production mode,uncomment and change it to 'prod'
 app.mode: 'dev'
 app.url.upload_url: '{$app.domain.app}/uploader'

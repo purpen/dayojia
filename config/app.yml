@@ -1,5 +1,5 @@
 ---
-app.id: 'sher'
+app.id: 'jiashop'
 app.version: ''
 app.modules.boot: 'sher'
 
@@ -34,16 +34,16 @@ app.session.online_ttl: 600
 app.session.engine.options:
    # mongodb session optional:
    'collection': 'session'
-app.session.sid: 'sher_sid'
+app.session.sid: 'jiashop_sid'
 #auth cookie:
-app.session.auth_sid: 'sher_asid'
+app.session.auth_sid: 'jiashop_asid'
 
 app.mongodb_host: 'mongodb://127.0.0.1'
 app.mongodb_rs: false
 # mongodb
 app.mongo.default:
   host: '127.0.0.1'
-  db: 'sher'
+  db: 'dayojia'
   replicaSet: false
 
 app.dt.extension_lib.sher_app:
@@ -64,28 +64,18 @@ app.css.use_bundle: false
 
 #邀请注册的开关
 app.url.invite.trigger:1
-# passport
-app.db.passport: 'mysql://root:root@localhost/passport?charset=utf8'
-app.db.default: 'mysql://root:root@localhost/passport?charset=utf8'
 
 # SinaWeibo API
 app.sinaweibo.app_key: '3866118033'
 app.sinaweibo.app_secret: '8143ca07fec3a2223ce1413099e5288b'
 
-#passport/sso section
-app.passport.version: 'v1'
-app.passport.auth_ttl: 180
-app.passport.v1.avatar_url: 'http://login.chinavisual.com/avatar/%s/%s/2/%s'
-app.passport.v1.sso_handle: '{$app.domain.app}/app/action/auth/sso_auth_v1'
-app.passport.v1.login: 'http://login.chinavisual.com/passport.app/passport/sso/AuthLogin?hash=%s&salt=%s&url=%s&app_id=%s&meta=1'
-app.passport.v1.register: 'http://login.chinavisual.com/passport.app/passport/sso/AuthRegister?hash=%s&salt=%s&url=%s&app_id=%s&meta=1'
-app.passport.v1.logout: 'http://login.chinavisual.com/passport.app/passport/sso/AuthLogout?url=%s'
-app.passport.v1.profile: 'http://login.chinavisual.com/'
-
 app.keychains.private: 'xxxxOOOOxxxx'
 app.email.from:
-  address: 'no-reply@chinavisual.com'
+  address: 'no-reply@dayojia.com'
   name: '系统邮件服务'
+
+# 微信token
+app.wechat.token: '53202b805771db4a0ac712c5'
 
 # 关注最大数
 app.follow.max: 2000
@@ -94,7 +84,7 @@ app.follow.max: 2000
 app.storage.sher:
     class:'Doggy_Storage_Provider_FileSystem'
     options:
-        root:"/Users/xiaoyi/Project/sher/data/web/uploads"
+        root:"/Users/xiaoyi/Project/dayojia/data/web/uploads"
         root_url:'/uploads'
         hash_dir:false
 
